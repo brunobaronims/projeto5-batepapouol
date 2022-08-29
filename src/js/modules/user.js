@@ -2,15 +2,19 @@ let username;
 
 async function login() {
   username = prompt('Username: ');
-  const response = await submitUsername('https://mock-api.driven.com.br/api/v6/uol/participants');
-  switch (response.status) {
-    case 400:
-      alert('Nome de usuário já em uso');
-      login();
-    case 200:
-      return true;
-    default:
-      return false;
+  if (username !== null) {
+    const response = await submitUsername('https://mock-api.driven.com.br/api/v6/uol/participants');
+    switch (response.status) {
+      case 400:
+        alert('Nome de usuário já em uso');
+        login();
+      case 200:
+        return true;
+      default:
+        return false;
+    }
+  } else {
+    alert('Login necessário');
   }
 }
 
