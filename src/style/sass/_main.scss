@@ -1,1 +1,41 @@
+@use 'globals';
 
+.full-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    margin-top: 5rem;
+    background-color: globals.$main-background;
+    height: calc(100% - 10rem);
+
+    ul {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+
+        li {
+            width: 100%;
+            height: 2rem;
+        }
+
+        .status {
+            background-color: globals.$exit-enter-alert-background;
+        }
+
+        .message {
+            background-color: globals.$message-background;
+        }
+
+        .reserved {
+            background-color: globals.$private-message-background;
+        }
+
+    }
+}
