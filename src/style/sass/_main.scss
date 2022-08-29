@@ -22,7 +22,18 @@ main {
 
         li {
             width: 100%;
-            height: 2rem;
+            padding: 0.8rem 0 0.8rem 0.5rem;
+            margin-bottom: 0.2rem;
+            height: fit-content;
+            font: 0.9rem globals.$main-font;
+            color: globals.$main-font-color;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        li:last-child {
+            margin: 0;
         }
 
         .status {
@@ -37,5 +48,13 @@ main {
             background-color: globals.$private-message-background;
         }
 
+        b {
+            font-weight: 700;
+            margin: 0 0.3rem;
+        }
+
+        span {
+            color: globals.$timestamp-color;
+        }
     }
 }
