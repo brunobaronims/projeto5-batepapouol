@@ -4,7 +4,7 @@ const Messages = function () {
       const buffer = await fetch('https://mock-api.driven.com.br/api/v6/uol/messages');
       return buffer.json();
     } catch(error) {
-      console.error('Não foi possivel resgatar as mensagens:', error);
+      console.error('Não foi possivel resgatar as mensagens: ', error);
     }
   };
 
